@@ -41,6 +41,7 @@ import com.gtotek.kidquiz.util.ConnectionDetectorUtil;
 import com.gtotek.kidquiz.util.LetterUtil;
 import com.gtotek.kidquiz.util.PreferenceUtil;
 import com.gtotek.kidquiz.util.SoundUtil;
+import com.winsontan520.WScratchView;
 
 public abstract class BaseActivity extends Activity {
 
@@ -49,7 +50,7 @@ public abstract class BaseActivity extends Activity {
 
 	/** The interstitial ad. */
 	private InterstitialAd interstitialAd;
-
+	protected WScratchView mWScratchView;
 	protected AlertDialog.Builder mBuilder;
 	protected Context mContext = this;
 	protected GridView mGrvQuestion;
@@ -126,6 +127,8 @@ public abstract class BaseActivity extends Activity {
 				share(v);
 			}
 		});
+		
+		
 
 		this.mTvRuby = (TextView) this.findViewById(R.id.tv_ruby);
 
