@@ -11,5 +11,13 @@
     <declare-styleable name="MyTextView">
         <attr name="fontName" format="string" />
     </declare-styleable>
+    
+<!--     <declare-styleable name="WScratchView"> -->
+<!--         <attr name="overlayColor" format="color"/> -->
+<!--         <attr name="revealSize" format="dimension"/> -->
+<!--         <attr name="antiAlias" format="boolean"/> -->
+<!--         <attr name="scratchable" format="boolean"/> -->
+<!--         <attr name="scratchDrawable" format="reference"/> -->
+<!--     </declare-styleable> -->
 
 </resources>
