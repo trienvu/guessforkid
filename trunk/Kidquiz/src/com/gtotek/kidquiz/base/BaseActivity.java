@@ -94,7 +94,7 @@ public abstract class BaseActivity extends Activity {
 			finish();
 		}*/
 
-		 setInterstitialAd();
+//		 setInterstitialAd();
 		initialize();
 	}
 
