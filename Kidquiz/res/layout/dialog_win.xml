@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:weightSum="5.0" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.0"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        android:weightSum="3.0" >
+
+        <com.gtotek.kidquiz.customview.FontTextView
+            android:id="@+id/tvWonderful"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="bottom|center"
+            android:text="@string/wonderful"
+            android:textColor="#54C40F"
+            android:textSize="35.0dip"
+            app:fontName="North Face.ttf" />
+
+        <com.gtotek.kidquiz.customview.FontTextView
+            android:id="@+id/tvGuessed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="top|center"
+            android:text="@string/guessed"
+            android:textColor="#ffffffff"
+            android:textSize="24.0dip"
+            app:fontName="MyriadPro.ttf" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.0"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_divider"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.0"
+        android:clipChildren="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2.0" >
+
+        <GridView
+            android:id="@+id/gvWin"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:cacheColorHint="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="7"
+            android:verticalSpacing="5dp" >
+        </GridView>
+
+        <ImageView
+            android:id="@id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.0"
+            android:src="@drawable/ic_app" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.0"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_divider"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:clipChildren="false"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.gtotek.kidquiz.customview.FontTextView
+            android:id="@+id/tvContinue"
+            style="@style/Button.Green.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_above="@+id/llIntro"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:text="@string/tv_continues_title"
+            app:fontName="MyriadPro-Bold.otf" />
+    </LinearLayout>
+
+</LinearLayout>

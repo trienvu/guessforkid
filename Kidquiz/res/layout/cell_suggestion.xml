@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <com.gtotek.kidquiz.customview.FontTextView
+        android:id="@+id/tv_letter"
+        style="@style/StyleItemOffer"
+        android:layout_width="@dimen/dmn_cell_answer_question_height_width"
+        android:layout_height="@dimen/dmn_cell_answer_question_height_width"
+        app:fontName="DroidSans-Bold.ttf" />
+
+</LinearLayout>
