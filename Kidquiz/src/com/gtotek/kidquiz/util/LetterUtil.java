@@ -26,34 +26,34 @@ public class LetterUtil {
 			letters.add(new Letter(i, letter));
 		}
 
-		Random random = new Random();
-
-		int len = alphabet.length;
-
-		letters.add(new Letter(size + 1, alphabet[random.nextInt(len)]));
-		letters.add(new Letter(size + 2, alphabet[random.nextInt(len)]));
-		letters.add(new Letter(size + 3, alphabet[random.nextInt(len)]));
-		letters.add(new Letter(size + 4, alphabet[random.nextInt(len)]));
-
-		int dapAnLen = letters.size();
-
-		int excess = 0;
-		int increment = 5;
-
-		if (dapAnLen < 14) {
-			excess = 14 - dapAnLen;
-		} else if (dapAnLen < 21) {
-			excess = 21 - dapAnLen;
-		} else if (dapAnLen < 28) {
-			excess = 28 - dapAnLen;
-		}
-		
-		excess += increment;
-
-		for (int i = increment; i < excess; i++) {
-			letters.add(new Letter(size + increment, alphabet[random
-					.nextInt(len)]));
-		}
+//		Random random = new Random();
+//
+//		int len = alphabet.length;
+//
+//		letters.add(new Letter(size + 1, alphabet[random.nextInt(len)]));
+//		letters.add(new Letter(size + 2, alphabet[random.nextInt(len)]));
+//		letters.add(new Letter(size + 3, alphabet[random.nextInt(len)]));
+//		letters.add(new Letter(size + 4, alphabet[random.nextInt(len)]));
+//
+//		int dapAnLen = letters.size();
+//
+//		int excess = 0;
+//		int increment = 5;
+//
+//		if (dapAnLen < 14) {
+//			excess = 14 - dapAnLen;
+//		} else if (dapAnLen < 21) {
+//			excess = 21 - dapAnLen;
+//		} else if (dapAnLen < 28) {
+//			excess = 28 - dapAnLen;
+//		}
+//		
+//		excess += increment;
+//
+//		for (int i = increment; i < excess; i++) {
+//			letters.add(new Letter(size + increment, alphabet[random
+//					.nextInt(len)]));
+//		}
 
 		Collections.shuffle(letters);
 
