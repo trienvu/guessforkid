@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg2x" >
+
+    <com.gtotek.kidquiz.customview.FontTextView
+        android:id="@+id/tvCongru"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:gravity="bottom|center"
+        android:text="@string/congratulations"
+        android:textColor="#54C40F"
+        android:textSize="38.0dip"
+        app:fontName="North Face.ttf" />
+
+    <com.gtotek.kidquiz.customview.FontTextView
+        android:id="@+id/tvAdmire"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCongru"
+        android:layout_marginTop="10dp"
+        android:gravity="top|center"
+        android:text="@string/admire"
+        android:textColor="#ffffffff"
+        android:textSize="24.0dip"
+        app:fontName="MyriadPro.ttf" />
+
+    <ImageView
+        android:id="@+id/imgBall"
+        android:layout_width="@dimen/vic_img_ball_width_height"
+        android:layout_height="@dimen/vic_img_ball_width_height"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_ball"
+        android:contentDescription="@string/app_name" />
+
+    <com.gtotek.kidquiz.customview.FontTextView
+        android:id="@+id/tvWait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvClose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="@string/wait"
+        android:textColor="#ffffffff"
+        android:textSize="24.0dip"
+        app:fontName="MyriadPro-Bold.otf" />
+
+    <com.gtotek.kidquiz.customview.FontTextView
+        android:id="@+id/tvClose"
+        style="@style/Button.Green.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="@string/close"
+        app:fontName="MyriadPro-Bold.otf" />
+
+</RelativeLayout>

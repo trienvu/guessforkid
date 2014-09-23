@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="maximum_height">550</integer>
+    <integer name="minimum_height">550</integer>
+
+</resources>

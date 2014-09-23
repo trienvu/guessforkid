@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2x2"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_actionbar" />
+
+    <RelativeLayout
+        android:id="@+id/rltFrame"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dmn_img_question_height"
+        android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
+        android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_photo" >
+
+        <ImageView
+            android:id="@+id/img_question"
+            android:layout_width="@dimen/view_img_question_height"
+            android:layout_height="@dimen/view_img_question_height"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/st" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/grv_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
+        android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
+        android:layout_marginTop="20dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="@dimen/dmn_grv_suggestion_answer_horizontalSpacing"
+        android:listSelector="@android:color/transparent"
+        android:verticalSpacing="@dimen/dmn_grv_suggestion_answer_verticalSpacing" >
+    </GridView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <GridView
+        android:id="@+id/grv_suggestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
+        android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
+        android:layout_marginTop="10dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="@dimen/dmn_grv_suggestion_answer_horizontalSpacing"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="7"
+        android:verticalSpacing="@dimen/dmn_grv_suggestion_answer_verticalSpacing" >
+    </GridView>
+
+</LinearLayout>

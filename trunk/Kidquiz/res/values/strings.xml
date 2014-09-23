@@ -1,0 +1,44 @@
+<resources>
+    
+    <string name="internet_error_msg">Please check your internet !!!</string>
+	
+    <string name="app_name">Guess The Football</string>
+    <string name="slogan">Nothing is impossible</string>
+    <string name="congratulations">CONGRATULATION</string>
+    <string name="victory">WINNER</string>
+    <string name="vic_info">You\'ve finished this game</string>
+    <string name="dapan">You\'ve found the anwser</string>
+    <string name="thuong">You are awarded 10 rubies !!!</string>
+    <string name="text_btnClose">Close</string>
+    <string name="text_title_help_dialog">Suggestions: </string>
+    <string name="tv_continues_title">CONTINUE</string>
+    <string name="btn_help_negative">Canncel</string>
+    <string name="btn_help_positive">Yes</string>
+    <string name="builder_message">Using the suggestions you have lost 20 rubies</string>
+    <string name="toast_share_message">You get 5 rubies per share !!!</string>
+    <string name="toast_help_error_message">You do not own enough Rubies!!! !!!</string>
+    <string name="desc_jav">This is your string.
+  		 This is the second line of your string.\n\n 
+  		 Third line of your string.</string>
+    <string name="version_info"> Football Quiz\nVersion:1.0\nEmail:Gtotek135@gmail.com\nDev: GtoTek Studio</string>
+    <string name="close">Close</string>
+    <string name="id_admob">ca-app-pub-7725997656573645/6062327016</string>
+    
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_7">7</string>
+    <string name="number_8">8</string>
+    <string name="number_9">9</string>
+	
+    
+    <string name="infomartion">Information</string>
+    <string name="admire">You\'re too knowledgeable about football</string>
+    <string name="wait">Wait for the next challenge</string>
+    <string name="wonderful">WONDERFUL!</string>
+    <string name="guessed"> You\'ve guessed the word!</string>
+   
+</resources>

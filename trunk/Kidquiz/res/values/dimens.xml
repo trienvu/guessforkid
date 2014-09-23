@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Action bar -->
+    <dimen name="actionbar_height">60dp</dimen>
+    <dimen name="cps_actionbar_height">51.0dip</dimen>
+    <dimen name="actionbar_iv_back_width_height">50.0dp</dimen>
+    <dimen name="actionbar_padding_top_bottom">0.0dp</dimen>
+    <dimen name="actionbar_iv_help_width_height">47.0dp</dimen>
+    <dimen name="actionbar_tv_ruby_height">50.0dip</dimen>
+
+    <!-- Start screen -->
+    <dimen name="startscreen_iv_welcome_height">230dip</dimen>
+    <dimen name="startscreen_iv_welcome_width">290dip</dimen>
+    <dimen name="startscreen_tv_play_height">56.0dip</dimen>
+    <dimen name="startscreen_tv_play_margin_left_right">30.0dip</dimen>
+    <dimen name="startscreen_tv_play_margin_top">20.0dip</dimen>
+    <dimen name="startscreen_tv_play_padding_left_right">17.0dip</dimen>
+
+    <!-- Playing screen -->
+    <dimen name="dmn_img_question_height">200dp</dimen>
+    <dimen name="dmn_view_question_margin_left_right">20dp</dimen>
+    <dimen name="dmn_view_question_padding">4dp</dimen>
+     <dimen name="view_img_question_height">120dp</dimen>
+    <!-- Cell answer/suggestion -->
+    <dimen name="dmn_cell_answer_question_height_width">35dp</dimen>
+    <dimen name="dmn">200dp</dimen>
+
+    <!-- Victory screen -->
+    <dimen name="vic_img_ball_width_height">200dp</dimen>
+
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg2x" >
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/img1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/tv_foodball" />
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/img1"
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:layout_above="@+id/tvPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/ic_ballquiz" />
+
+    <com.gtotek.kidquiz.customview.FontTextView
+        android:id="@+id/tvPlay"
+        style="@style/Button.Green.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_above="@+id/llIntro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="PLAY"
+        app:fontName="MyriadPro-Bold.otf" />
+
+    <RelativeLayout
+        android:id="@+id/llIntro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/ivWheel"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_wheel"
+            android:contentDescription="@string/app_name" />
+		
+        
+        <ImageView
+            android:id="@+id/ivSound"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/ivInfo"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_sound_on"
+            android:contentDescription="@string/app_name" />
+        
+        <ImageView
+            android:id="@+id/ivInfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_info"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+</RelativeLayout>
