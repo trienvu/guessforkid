@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-     xmlns:app="http://schemas.android.com/apk/res/com.gtotek.kidquiz"
+    xmlns:app="http://schemas.android.com/apk/res/com.gtotek.kidquiz"
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,21 +17,8 @@
         android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginTop="12dp"
-        android:background="@drawable/bg_photo" >
-
-        <com.winsontan520.WScratchView
-            xmlns:wsv="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/scratch_view"
-            android:layout_width="@dimen/view_img_question_height"
-            android:layout_height="@dimen/view_img_question_height"
-            android:layout_centerInParent="true" 
-            wsv:antiAlias="true"
-        wsv:revealSize="20dp"
-        wsv:scratchDrawable="@drawable/ic_app"
-        wsv:scratchable="true" 
-             />
-
-        <ImageView
+        android:background="@drawable/bg_photo" > 
+        <ImageView 
             android:id="@+id/img_question"
             android:layout_width="@dimen/view_img_question_height"
             android:layout_height="@dimen/view_img_question_height"
@@ -39,8 +26,17 @@
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
-            android:src="@drawable/st"
-            android:visibility="gone" />
+            android:src="@drawable/st" />
+        
+         <com.winsontan520.WScratchView
+            xmlns:wsv="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scratch_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            wsv:antiAlias="true"
+            wsv:overlayColor="#0000ff"
+            wsv:revealSize="20dp" />
     </RelativeLayout>
 
     <GridView
