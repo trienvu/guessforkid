@@ -5,7 +5,7 @@
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_kid1"
+    android:background="@drawable/bg_kid2"
     android:orientation="vertical" >
 
     <include layout="@layout/layout_actionbar" />
