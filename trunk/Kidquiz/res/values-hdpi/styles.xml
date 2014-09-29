@@ -7,7 +7,7 @@
 
     <style name="StyleItemOffer" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">#ff000000</item>
-        <item name="android:background">@drawable/item_offer</item>
+        <item name="android:background">@drawable/input_box_reveal</item>
         <item name="android:scaleType">fitXY</item>
         <item name="android:textSize">22.0sp</item>
         <item name="android:textStyle">bold</item>
