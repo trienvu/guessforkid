@@ -10,7 +10,7 @@
     
     <!-- Action bar -->
     <dimen name="actionbar_height">60dp</dimen>
-	<dimen name="actionbar_iv_back_width_height">50.0dp</dimen>	
+	<dimen name="actionbar_iv_back_width_height">48.0dp</dimen>	
 	<dimen name="actionbar_iv_help_width_height">45.0dp</dimen>	
 	<dimen name="actionbar_tv_ruby_height">50.0dip</dimen>	
 

@@ -5,7 +5,7 @@
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2x2"
+    android:background="@drawable/bg_kid1"
     android:orientation="vertical" >
 
     <include layout="@layout/layout_actionbar" />
@@ -17,8 +17,10 @@
         android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginTop="12dp"
-        android:background="@drawable/bg_photo" > 
-        <ImageView 
+        android:background="@drawable/bg_photo"
+        >
+
+        <ImageView
             android:id="@+id/img_question"
             android:layout_width="@dimen/view_img_question_height"
             android:layout_height="@dimen/view_img_question_height"
@@ -27,15 +29,18 @@
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
             android:src="@drawable/st" />
-        
-         <com.winsontan520.WScratchView
+
+        <com.winsontan520.WScratchView
             xmlns:wsv="http://schemas.android.com/apk/res-auto"
             android:id="@+id/scratch_view"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_centerInParent="true"
+            android:layout_margin="15dp"
+            android:adjustViewBounds="true"
+            android:visibility="visible"
             wsv:antiAlias="true"
-            wsv:overlayColor="#0000ff"
+            wsv:overlayColor="#3fe20c"
             wsv:revealSize="20dp" />
     </RelativeLayout>
 
