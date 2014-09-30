@@ -5,8 +5,8 @@
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_kid2"
-    android:orientation="vertical" >
+    android:background="@drawable/bg_kid3"
+    android:orientation="vertical" xmlns:app1="http://schemas.android.com/apk/res-auto">
 
     <include layout="@layout/layout_actionbar" />
 
@@ -17,6 +17,7 @@
         android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginTop="12dp"
+        android:padding="20dp"
         android:background="@drawable/bg_photo"
         >
 
@@ -35,13 +36,13 @@
             android:id="@+id/scratch_view"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_centerInParent="true"
-            android:layout_margin="15dp"
+            android:layout_centerVertical="true"
             android:adjustViewBounds="true"
             android:visibility="visible"
-            wsv:antiAlias="true"
-            wsv:overlayColor="#3fe20c"
-            wsv:revealSize="20dp" />
+            app1:antiAlias="true"
+            app1:overlayColor="#3fe20c"
+            app1:revealSize="20dp" />
+
     </RelativeLayout>
 
     <GridView
