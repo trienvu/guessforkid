@@ -12,7 +12,7 @@
     </style>
 
     <style name="StyleItemOffer" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">#ff000000</item>
+        <item name="android:textColor">#3fe20c</item>
         <item name="android:background">@drawable/input_box_fill</item>
         <item name="android:scaleType">fitXY</item>
         <item name="android:textSize">25.0sp</item>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg2x" >
+    android:background="@drawable/bg_kid2" >
 
     <com.gtotek.kidquiz.customview.FontTextView
         android:id="@+id/tvCongru"
@@ -35,7 +35,7 @@
         android:layout_height="@dimen/vic_img_ball_width_height"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/ic_ball"
+        android:background="@drawable/ic_kid"
         android:contentDescription="@string/app_name" />
 
     <com.gtotek.kidquiz.customview.FontTextView
