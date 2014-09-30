@@ -24,7 +24,7 @@
         <item name="android:textColor">#ff000000</item>
         <item name="android:scaleType">fitXY</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/input_box_reveal</item>
+        <item name="android:background">@drawable/input_box_fill</item>
         <item name="android:paddingTop">2.0dip</item>
         <item name="android:paddingBottom">2.0dip</item>
         <item name="android:layout_width">wrap_content</item>
@@ -37,7 +37,7 @@
         <item name="android:scaleType">fitXY</item>
         <item name="android:textColor">#ff0000ff</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/bg_slot</item>
+        <item name="android:background">@drawable/input_box_fill</item>
         <item name="android:paddingTop">2.0dip</item>
         <item name="android:paddingBottom">2.0dip</item>
         <item name="android:layout_width">wrap_content</item>

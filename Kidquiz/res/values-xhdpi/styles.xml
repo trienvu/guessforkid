@@ -1,4 +1,5 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
+
     <style name="style_menu_item_play">
         <item name="android:textSize">22.0sp</item>
         <item name="android:textStyle">bold</item>
@@ -9,4 +10,27 @@
         <item name="android:shadowDy">1.0</item>
         <item name="android:shadowRadius">2.0</item>
     </style>
+
+    <style name="StyleItemOffer" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:background">@drawable/input_box_fill</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:textSize">25.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="StyleItemAnswer" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">25.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/input_box_fill</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>

@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bitmap android:src="@drawable/bg_photo_hires"
+<bitmap android:src="@drawable/frame4"
   xmlns:android="http://schemas.android.com/apk/res/android" />
