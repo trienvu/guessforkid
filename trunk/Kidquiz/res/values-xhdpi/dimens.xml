@@ -32,4 +32,6 @@
 	
 	
 	<dimen name="winjavscreen_tv_congratulation_height">70dip</dimen>
+	
+	<dimen name="start_header_height_width">45sp</dimen>
 </resources>

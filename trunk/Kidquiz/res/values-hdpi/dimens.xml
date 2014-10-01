@@ -40,4 +40,7 @@
       <!-- Victory screen -->
     <dimen name="vic_img_ball_width_height">150dp</dimen>
     
+    <dimen name="start_header_height_width">30sp</dimen>
+    
+    
 </resources>
