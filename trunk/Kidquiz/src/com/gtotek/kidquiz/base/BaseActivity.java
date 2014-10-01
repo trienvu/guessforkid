@@ -11,33 +11,33 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gtotek.kidquiz.R;
 import com.androidquery.AQuery;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd; 
+import com.google.android.gms.ads.InterstitialAd;
+import com.gtotek.kidquiz.R;
 import com.gtotek.kidquiz.activity.VictoryActivity;
 import com.gtotek.kidquiz.adapter.AnswerAdapter;
 import com.gtotek.kidquiz.adapter.SuggestionAdapter;
 import com.gtotek.kidquiz.dao.Letter;
-import com.gtotek.kidquiz.dao.QuestionDao;
 import com.gtotek.kidquiz.dao.QuestionEntity;
 import com.gtotek.kidquiz.dao.QuestionImpl;
 import com.gtotek.kidquiz.util.CaptureLayoutUtil;
-import com.gtotek.kidquiz.util.ConnectionDetectorUtil;
 import com.gtotek.kidquiz.util.LetterUtil;
 import com.gtotek.kidquiz.util.PreferenceUtil;
 import com.gtotek.kidquiz.util.SoundUtil;
@@ -53,7 +53,7 @@ public abstract class BaseActivity extends Activity {
 	protected WScratchView mWScratchView;
 	protected AlertDialog.Builder mBuilder;
 	protected Context mContext = this;
-	protected GridView mGrvQuestion;
+	protected GridView mGrvAnswer;
 	protected GridView mGrvSuggestions;
 	protected TextView mTvLevel;
 	protected TextView mTvRuby;
@@ -89,13 +89,13 @@ public abstract class BaseActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		/*if (!ConnectionDetectorUtil.isConnectingToInternet(mContext)) {
-			Toast.makeText(mContext, R.string.internet_error_msg,
-					Toast.LENGTH_LONG).show();
-			finish();
-		}*/
+		/*
+		 * if (!ConnectionDetectorUtil.isConnectingToInternet(mContext)) {
+		 * Toast.makeText(mContext, R.string.internet_error_msg,
+		 * Toast.LENGTH_LONG).show(); finish(); }
+		 */
 
-//		 setInterstitialAd();
+		// setInterstitialAd();
 		initialize();
 	}
 
@@ -127,8 +127,6 @@ public abstract class BaseActivity extends Activity {
 				share(v);
 			}
 		});
-		
-		
 
 		this.mTvRuby = (TextView) this.findViewById(R.id.tv_ruby);
 
@@ -140,11 +138,12 @@ public abstract class BaseActivity extends Activity {
 
 		this.mAQuery = new AQuery(mContext);
 
-		this.mGrvQuestion = (GridView) findViewById(R.id.grv_answer);
+		this.mGrvAnswer = (GridView) findViewById(R.id.grv_answer);
 
 		this.mAnswerAdapter = new AnswerAdapter(mContext, mAnswerLetters);
-		this.mGrvQuestion.setAdapter(mAnswerAdapter);
-		this.mGrvQuestion.setOnItemClickListener(answerOnItemClickListener);
+		
+		this.mGrvAnswer.setAdapter(mAnswerAdapter);
+		this.mGrvAnswer.setOnItemClickListener(answerOnItemClickListener);
 
 		this.mSuggestionAdapter = new SuggestionAdapter(mContext,
 				mSuggestionLetters);
@@ -273,7 +272,7 @@ public abstract class BaseActivity extends Activity {
 	protected void failQuestion() {
 
 		Animation anim = AnimationUtils.loadAnimation(mContext, R.anim.shaking);
-		mGrvQuestion.setAnimation(anim);
+		mGrvAnswer.setAnimation(anim);
 		anim.start();
 
 		SoundUtil.hexat(mContext, SoundUtil.OVER);
@@ -304,10 +303,18 @@ public abstract class BaseActivity extends Activity {
 		this.mSuggestionLetters.addAll(LetterUtil
 				.generateSuggestion(this.mQuestionEntity));
 
-		if (mAnswerLetters.size() <= 7)
-			mGrvQuestion.setNumColumns(mAnswerLetters.size());
+		if (mAnswerLetters.size() <= 7) {
+			Toast.makeText(mContext, "" + mAnswerLetters.size(), Toast.LENGTH_LONG).show();			
+			mGrvAnswer.setNumColumns(mAnswerLetters.size());
+			ViewGroup.LayoutParams layoutParams = mGrvAnswer.getLayoutParams();
+			layoutParams.width = LayoutParams.WRAP_CONTENT; //this is in pixels
+			layoutParams.height = LayoutParams.WRAP_CONTENT; //this is in pixels		
+			mGrvAnswer.setLayoutParams(layoutParams);
+			mGrvAnswer.setGravity(Gravity.CENTER);
+		}
+
 		else
-			mGrvQuestion.setNumColumns(7);
+			mGrvAnswer.setNumColumns(7);
 
 		mAnswerAdapter.notifyDataSetChanged();
 		mSuggestionAdapter.notifyDataSetChanged();
@@ -322,7 +329,7 @@ public abstract class BaseActivity extends Activity {
 		}
 
 		if (mAnswerAdapter.suscess(mQuestionEntity)) {
-//		if (true) {
+			// if (true) {
 			passQuestion();
 			ruby += Constans.RUBY_BONUS;
 			PreferenceUtil.setValue(mContext, Constans.KEY_RUBY, ruby);

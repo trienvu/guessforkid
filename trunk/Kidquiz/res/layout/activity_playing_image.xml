@@ -48,16 +48,15 @@
         android:id="@+id/grv_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginTop="20dp"
-        android:cacheColorHint="@android:color/transparent"
-        android:gravity="center"
-        android:horizontalSpacing="@dimen/dmn_grv_suggestion_answer_horizontalSpacing"
-        android:listSelector="@android:color/transparent"
-        android:numColumns="7"
-        android:verticalSpacing="@dimen/dmn_grv_suggestion_answer_verticalSpacing" >
+        android:listSelector="@null"
+        android:horizontalSpacing="2dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="2dp" >
     </GridView>
 
     <TextView
