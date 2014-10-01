@@ -2,6 +2,7 @@ package com.gtotek.kidquiz.adapter;
 
 import java.util.List;
 
+import com.google.android.gms.internal.co;
 import com.gtotek.kidquiz.R;
 import com.gtotek.kidquiz.dao.Letter;
 import com.gtotek.kidquiz.dao.QuestionEntity;
@@ -158,9 +159,7 @@ public class AnswerAdapter extends BaseAdapter {
 		ViewHolder viewHolder;
 
 		if (convertView == null) {
-
 			convertView = mLayoutInflater.inflate(R.layout.cell_answer, null);
-
 			viewHolder = new ViewHolder(convertView);
 		} else {
 			viewHolder = (ViewHolder) convertView.getTag();

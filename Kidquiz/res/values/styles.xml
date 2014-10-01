@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -21,11 +21,12 @@
 
     <style name="StyleItemOffer" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">24.0sp</item>
-        <item name="android:textColor">#ff000000</item>
+        <item name="android:textColor">#ff0000</item>
         <item name="android:scaleType">fitXY</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/o_chu</item>
-      <item name="android:padding">2.0dip</item>
+        <item name="android:padding">2.0dip</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -38,10 +39,10 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/o_trong</item>
         <item name="android:padding">2.0dip</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-
 
     <style name="style_more_app_title">
         <item name="android:textSize">19.0sp</item>
@@ -78,9 +79,6 @@
         <item name="android:paddingRight">@dimen/winscreen_tv_continues_padding_left_right</item>
     </style>
 
-   
-
-  
     <style name="style_piece_cell">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">fill_parent</item>
@@ -174,15 +172,14 @@
         <item name="android:shadowRadius">2.0</item>
     </style>
 
-       
-      <style name="dialog_animation_slide">
+    <style name="dialog_animation_slide">
         <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
         <item name="android:windowExitAnimation">@anim/slide_out_right</item>
     </style>
 
     <style name="dialog_animation_grow">
         <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
-<!--         <item name="@android:windowExitAnimation">@anim/grow_from_top</item> -->
+        <!-- <item name="@android:windowExitAnimation">@anim/grow_from_top</item> -->
     </style>
 
 </resources>

@@ -6,11 +6,12 @@
     <style name="AppTheme" parent="@style/AppBaseTheme" />
 
     <style name="StyleItemOffer" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">#ff000000</item>
-        <item name="android:background">@drawable/item_offer</item>
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:background">@drawable/o_trong</item>
         <item name="android:scaleType">fitXY</item>
         <item name="android:textSize">24.0sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -22,10 +23,10 @@
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:scaleType">fitXY</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/bg_slot_hires</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/o_chu</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-
 
 </resources>
