@@ -48,13 +48,17 @@ public class VictoryActivity extends Activity {
 				R.anim.shaking);
 		Animation animRotate = AnimationUtils.loadAnimation(mContext,
 				R.anim.rotate);
+		
+		Animation animBrounce = AnimationUtils.loadAnimation(mContext,
+				R.anim.brounce);
+		
 		animTopDown.setDuration(2000);
 		animLeftRightCycle.setDuration(70000);
 		animRotate.setDuration(2000);
 		
 		mTvAdmire.setAnimation(animTopDown);
 		mTvWait.setAnimation(animLeftRightCycle);
-		mImgBall.setAnimation(animRotate);
+		mImgBall.setAnimation(animBrounce);
 		mTvClose.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

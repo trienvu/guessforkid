@@ -14,7 +14,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_app"
+        android:icon="@drawable/ic_kid"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <meta-data
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gtotek.kidquiz.activity.PlayingImageActivity"
+            android:name="com.gtotek.kidquiz.activity.StartPlayActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
@@ -42,7 +42,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.gtotek.kidquiz.activity.StartPlayActivity"
+            android:name="com.gtotek.kidquiz.activity.PlayingImageActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
