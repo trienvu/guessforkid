@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class AnswerAdapter extends BaseAdapter {
@@ -33,19 +34,19 @@ public class AnswerAdapter extends BaseAdapter {
 	}
 
 	@SuppressLint("DefaultLocale")
-	public Integer  hepl(QuestionEntity questionEntity, List<Letter> letters) {
+	public Integer hepl(QuestionEntity questionEntity, List<Letter> letters) {
 		int len = questionEntity.getDapAnKoDau().length();
 		Letter let = null;
 		Letter clone = null;
-		
-//		Integer[] array = new Integer[2];
-		
+
+		// Integer[] array = new Integer[2];
+
 		for (int i = 0; i < len; ++i) {
 
 			Letter answerLetter = mAnswerLetters.get(i);
 
 			if (!answerLetter.isHepl()) {
-				let =  answerLetter ;
+				let = answerLetter;
 				clone = (Letter) answerLetter.clone();
 				answerLetter.setLetter(questionEntity.getDapAnKoDau().charAt(i)
 						+ "");
@@ -54,9 +55,9 @@ public class AnswerAdapter extends BaseAdapter {
 				break;
 			}
 		}
-		
-		//find position when restore
-		if(null != clone){
+
+		// find position when restore
+		if (null != clone) {
 			String strClone = clone.getLetter().trim().toUpperCase();
 			for (int i = 0; i < letters.size(); ++i) {
 				Letter letter = letters.get(i);
@@ -173,13 +174,15 @@ public class AnswerAdapter extends BaseAdapter {
 			viewHolder.tvLetter.setTextColor(Color.parseColor("#FFFFFF"));
 		}
 
+		viewHolder.llCellAnswer.setPadding(-5, -5, -5, -5);
 		return convertView;
 	}
 
 	private static class ViewHolder {
 		TextView tvLetter;
-
+		LinearLayout llCellAnswer;
 		public ViewHolder(View v) {
+			llCellAnswer = (LinearLayout) v.findViewById(R.id.llCellAnswer);
 			tvLetter = (TextView) v.findViewById(R.id.tv_letter);
 			v.setTag(this);
 		}

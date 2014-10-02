@@ -24,7 +24,7 @@ public class SoundUtil {
 
 	public static void hexat(Context context, int sound) {
 		int soundState =  PreferenceUtil.getValue(context, Constans.KEY_SOUND, 1);
-		
+		soundState = 0;
 		if(soundState == 0){
 			return;
 		}

@@ -23,11 +23,17 @@
     <dimen name="dmn_view_question_padding">4dp</dimen>
      <dimen name="view_img_question_height">120dp</dimen>
     <!-- Cell answer/suggestion -->
-    <dimen name="dmn_cell_answer_question_height_width">35dp</dimen>
+        <dimen name="dmn_cell_answer_question_width">34dp</dimen>
+    <dimen name="dmn_cell_answer_question_height">36dp</dimen>
     <dimen name="dmn">200dp</dimen>
 
     <!-- Victory screen -->
     <dimen name="vic_img_ball_width_height">200dp</dimen>
 	
     <dimen name="start_header_height_width">45sp</dimen>
+    
+    
+    <dimen name="left_padding">4dp</dimen>
+    <dimen name="right_padding">4dp</dimen>
+    <dimen name="horizontal_spacing">3dp</dimen>
 </resources>

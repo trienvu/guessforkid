@@ -40,45 +40,55 @@
             android:adjustViewBounds="true"
             android:visibility="visible"
             app1:antiAlias="true"
+            app1:scratchDrawable="@drawable/ic_kid"
             app1:overlayColor="#3fe20c"
             app1:revealSize="20dp" />
     </RelativeLayout>
 
-    <GridView
+    <com.gtotek.kidquiz.customview.CustomGridView
         android:id="@+id/grv_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginTop="20dp"
-        android:listSelector="@null"
-        android:horizontalSpacing="2dp"
+        android:columnWidth="@dimen/dmn_cell_answer_question_width"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/horizontal_spacing"
+        android:listSelector="@android:color/transparent"
         android:numColumns="auto_fit"
-        android:verticalSpacing="2dp" >
-    </GridView>
+        android:paddingBottom="3dp"
+        android:paddingLeft="@dimen/left_padding"
+        android:paddingRight="@dimen/right_padding"
+        android:paddingTop="3dp"
+        android:stretchMode="none"
+        android:verticalSpacing="@dimen/horizontal_spacing" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <GridView
+    <com.gtotek.kidquiz.customview.CustomGridView
         android:id="@+id/grv_suggestions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
         android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
-        android:layout_marginTop="10dp"
-        android:cacheColorHint="@android:color/transparent"
+        android:columnWidth="@dimen/dmn_cell_answer_question_width"
         android:gravity="center"
-        android:horizontalSpacing="@dimen/dmn_grv_suggestion_answer_horizontalSpacing"
+        android:horizontalSpacing="@dimen/horizontal_spacing"
         android:listSelector="@android:color/transparent"
-        android:numColumns="7"
-        android:verticalSpacing="@dimen/dmn_grv_suggestion_answer_verticalSpacing" >
-    </GridView>
+        android:numColumns="auto_fit"
+        android:paddingBottom="3dp"
+        android:paddingLeft="@dimen/left_padding"
+        android:paddingRight="@dimen/right_padding"
+        android:paddingTop="3dp"
+        android:stretchMode="none"
+        android:verticalSpacing="@dimen/horizontal_spacing" />
 
 </LinearLayout>

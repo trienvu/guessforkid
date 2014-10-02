@@ -7,10 +7,18 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
  
+
+
+
 import com.gtotek.kidquiz.R;
 import com.gtotek.kidquiz.base.BaseActivity;
 import com.gtotek.kidquiz.base.Constans;
@@ -88,12 +96,7 @@ public class PlayingImageActivity extends BaseActivity implements
 
 	@Override
 	protected void passQuestion() {
-		// TODO Auto-generated method stub
-		/*
-		 * Intent intent = new Intent(mContext, WinActivity.class);
-		 * intent.putExtra(Constans.KEY_QUESTIONENTITY, mQuestionEntity);
-		 * startActivity(intent);
-		 */
+		mWScratchView.setVisibility(View.INVISIBLE);
 		mWinDialog = new WinDialog(mContext, mQuestionEntity);
 		mWinDialog.setOnCloseWinDialog(this);
 		mWinDialog.show();
@@ -104,7 +107,9 @@ public class PlayingImageActivity extends BaseActivity implements
 
 	@Override
 	public void closeDialog() {
-		next();
+		mWScratchView.setVisibility(View.VISIBLE);
+		next();		
 	}
 
+	
 }
