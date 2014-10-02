@@ -9,13 +9,15 @@
 	<dimen name="startscreen_tv_play_padding_left_right">15.0dip</dimen>
 	
     <!-- Playing screen -->
-    <dimen name="dmn_img_question_height">220dp</dimen>
-    <dimen name="dmn_view_question_margin_left_right">25dp</dimen>
+    <dimen name="dmn_img_question_height">240dp</dimen>
+    <dimen name="dmn_view_question_margin_left_right">15dp</dimen>
     <dimen name="dmn_view_question_padding">4dp</dimen>
       <dimen name="view_img_question_height">120dp</dimen>
     
     <!-- Cell answer/suggestion -->
-    <dimen name="dmn_cell_answer_question_height_width">34dp</dimen>
+    <dimen name="dmn_cell_answer_question_width">38dp</dimen>
+    <dimen name="dmn_cell_answer_question_height">40dp</dimen>
+    
     <dimen name="dmn_grv_suggestion_answer_verticalSpacing">5dp</dimen>
     <dimen name="dmn_grv_suggestion_answer_horizontalSpacing">1dp</dimen>
     

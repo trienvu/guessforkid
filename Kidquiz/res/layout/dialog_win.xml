@@ -53,32 +53,36 @@
         android:layout_height="wrap_content"
         android:layout_weight="2.0"
         android:clipChildren="false"
-        android:gravity="center"
+        android:gravity="bottom|center_horizontal"
         android:orientation="vertical"
         android:weightSum="2.0" >
 
-        <GridView
+        <com.gtotek.kidquiz.customview.CustomGridView
             android:id="@+id/gvWin"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
+            android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
             android:layout_weight="1"
-            android:cacheColorHint="@android:color/transparent"
-            android:gravity="center_horizontal"
-            android:horizontalSpacing="5dp"
+            android:columnWidth="@dimen/dmn_cell_answer_question_width"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/horizontal_spacing"
             android:listSelector="@android:color/transparent"
-            android:numColumns="7"
-            android:verticalSpacing="5dp" >
-        </GridView>
+            android:numColumns="auto_fit"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/left_padding"
+            android:paddingRight="@dimen/right_padding"
+            android:paddingTop="3dp"
+            android:stretchMode="none"
+            android:verticalSpacing="@dimen/horizontal_spacing" />
 
         <ImageView
             android:id="@id/imageView1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1.0"
+            android:visibility="gone"
             android:src="@drawable/ic_kid" />
     </LinearLayout>
 

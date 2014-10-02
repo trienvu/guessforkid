@@ -28,11 +28,12 @@
 		
     <!-- Playing screen -->
     <dimen name="dmn_img_question_height">360dp</dimen>
-    <dimen name="dmn_view_question_margin_left_right">65dp</dimen>
+    <dimen name="dmn_view_question_margin_left_right">40dp</dimen>
     <dimen name="dmn_view_question_padding">4dp</dimen>
     <dimen name="view_img_question_height">180dp</dimen>
     <!-- Cell answer/suggestion -->
-    <dimen name="dmn_cell_answer_question_height_width">50dp</dimen>
+    <dimen name="dmn_cell_answer_question_width">50dp</dimen>
+    <dimen name="dmn_cell_answer_question_height">52dp</dimen>
     <dimen name="dmn_grv_suggestion_answer_verticalSpacing">5dp</dimen>
     <dimen name="dmn_grv_suggestion_answer_horizontalSpacing">2dp</dimen>
     

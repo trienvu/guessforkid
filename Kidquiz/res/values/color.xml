@@ -2,4 +2,7 @@
 <resources>
     <color name="color_btn_pressed">#9933b5e5</color>
     <color name="color_btn_normal">#dedede</color>
+    
+    
+ 	 <color name="color_red">#fa0505</color>
 </resources>

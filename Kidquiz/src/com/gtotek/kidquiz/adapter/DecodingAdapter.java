@@ -65,7 +65,9 @@ public class DecodingAdapter extends BaseAdapter {
 		}else{ 
 			viewHolder.tvLetter.setVisibility(View.INVISIBLE);
 		}
-
+		
+		viewHolder.tvLetter.setTextColor(mContext.getResources().getColor(R.color.color_red));
+		
 		return convertView;
 	}
 

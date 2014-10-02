@@ -15,8 +15,10 @@
     <string name="btn_help_negative">Canncel</string>
     <string name="btn_help_positive">Yes</string>
     <string name="builder_message">Using the suggestions you have lost 20 rubies</string>
+    <string name="skip_message">Skipping the question you have lost 20 rubies</string>
     <string name="toast_share_message">You get 5 rubies per share !!!</string>
     <string name="toast_help_error_message">You do not own enough Rubies!!! !!!</string>
+    <string name="toast_skip_message">Don\'t give up !!! !!!</string>
     <string name="desc_jav">This is your string.
   		 This is the second line of your string.\n\n 
   		 Third line of your string.</string>

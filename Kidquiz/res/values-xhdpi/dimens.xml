@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Playing screen -->
-    <dimen name="dmn_img_question_height">220dp</dimen>
-    <dimen name="dmn_view_question_margin_left_right">22dp</dimen>
+    <dimen name="dmn_img_question_height">250dp</dimen>
+    <dimen name="dmn_view_question_margin_left_right">18dp</dimen>
     <dimen name="dmn_view_question_padding">4dp</dimen>
    <dimen name="view_img_question_height">130dp</dimen>
     <!-- Cell answer/suggestion -->
-    <dimen name="dmn_cell_answer_question_height_width">40dp</dimen>
+    <dimen name="dmn_cell_answer_question_width">38dp</dimen>
+     <dimen name="dmn_cell_answer_question_height">40dp</dimen>
     
     <!-- Action bar -->
-    <dimen name="actionbar_height">60dp</dimen>
+    <dimen name="actionbar_height">50dp</dimen>
 	<dimen name="actionbar_iv_back_width_height">48.0dp</dimen>	
 	<dimen name="actionbar_iv_help_width_height">45.0dp</dimen>	
 	<dimen name="actionbar_tv_ruby_height">50.0dip</dimen>	

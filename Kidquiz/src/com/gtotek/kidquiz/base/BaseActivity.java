@@ -11,11 +11,14 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
@@ -124,7 +127,8 @@ public abstract class BaseActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				share(v);
+				//share(v);
+				skipQuestion();
 			}
 		});
 
@@ -141,7 +145,7 @@ public abstract class BaseActivity extends Activity {
 		this.mGrvAnswer = (GridView) findViewById(R.id.grv_answer);
 
 		this.mAnswerAdapter = new AnswerAdapter(mContext, mAnswerLetters);
-		
+
 		this.mGrvAnswer.setAdapter(mAnswerAdapter);
 		this.mGrvAnswer.setOnItemClickListener(answerOnItemClickListener);
 
@@ -260,6 +264,48 @@ public abstract class BaseActivity extends Activity {
 		mTvRuby.setText(ruby + "");
 	}
 
+	private void skipQuestion() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+		builder.setMessage(R.string.skip_message);
+		builder.setPositiveButton(R.string.btn_help_positive,
+				new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						doSkip();
+					}
+				});
+
+		builder.setNegativeButton(R.string.btn_help_negative,
+				new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+						dialog.dismiss();
+					}
+				});
+		builder.show();
+
+	}
+
+	private void doSkip() {
+		if (ruby > 20) {
+			ruby -= 20;
+			PreferenceUtil.setValue(mContext, Constans.KEY_RUBY, ruby);
+			mTvRuby.setText(ruby + "");
+			
+			//checkWin();
+			mWScratchView.resetView();
+			mWScratchView.setScratchable(true);
+			next();
+
+		} else {
+			Toast.makeText(mContext, R.string.toast_skip_message,
+					Toast.LENGTH_LONG).show();
+		}
+	
+	}
+
 	private void youWin() {
 		finish();
 		Intent intent = new Intent(mContext, VictoryActivity.class);
@@ -303,22 +349,18 @@ public abstract class BaseActivity extends Activity {
 		this.mSuggestionLetters.addAll(LetterUtil
 				.generateSuggestion(this.mQuestionEntity));
 
-		if (mAnswerLetters.size() <= 7) {
-			Toast.makeText(mContext, "" + mAnswerLetters.size(), Toast.LENGTH_LONG).show();			
-			mGrvAnswer.setNumColumns(mAnswerLetters.size());
-			ViewGroup.LayoutParams layoutParams = mGrvAnswer.getLayoutParams();
-			layoutParams.width = LayoutParams.WRAP_CONTENT; //this is in pixels
-			layoutParams.height = LayoutParams.WRAP_CONTENT; //this is in pixels		
-			mGrvAnswer.setLayoutParams(layoutParams);
-			mGrvAnswer.setGravity(Gravity.CENTER);
-		}
+		if (mSuggestionLetters.size() <= 7) {
+			mGrvSuggestions.setNumColumns(mSuggestionLetters.size());
+		} else
+			mGrvSuggestions.setNumColumns(7);
 
-		else
+		if (mAnswerLetters.size() <= 7) {
+			mGrvAnswer.setNumColumns(mAnswerLetters.size());
+		} else
 			mGrvAnswer.setNumColumns(7);
 
 		mAnswerAdapter.notifyDataSetChanged();
 		mSuggestionAdapter.notifyDataSetChanged();
-
 		incrementIndex();
 	}
 

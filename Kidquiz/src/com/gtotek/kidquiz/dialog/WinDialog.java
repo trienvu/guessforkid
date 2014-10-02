@@ -75,6 +75,15 @@ public class WinDialog extends Dialog {
 				mQuestionEntity);
 
 		mGrvDecoding.setAdapter(decodingAdapter);
+		
+		if(mQuestionEntity.getDapAnKoDau().trim().length() < 7){
+			mGrvDecoding.setNumColumns(mQuestionEntity.getDapAnKoDau().trim().length());
+		}
+		else{
+			mGrvDecoding.setNumColumns(7);
+		}
+		
+		
 		SoundUtil.hexat(mContext, SoundUtil.SFX_PASS);
 	}
 	
