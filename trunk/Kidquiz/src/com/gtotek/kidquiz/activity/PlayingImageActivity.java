@@ -3,21 +3,13 @@ package com.gtotek.kidquiz.activity;
 import java.io.InputStream;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
- 
-
-
 
 import com.gtotek.kidquiz.R;
 import com.gtotek.kidquiz.base.BaseActivity;
@@ -32,7 +24,6 @@ public class PlayingImageActivity extends BaseActivity implements
 	private Context mContext = this;
 	private ImageView mImgQuestion;
 	private WinDialog mWinDialog;
-	
 
 	@Override
 	protected void initialize() {
@@ -40,21 +31,22 @@ public class PlayingImageActivity extends BaseActivity implements
 		setContentView(R.layout.activity_playing_image);
 		this.mImgQuestion = (ImageView) this.findViewById(R.id.img_question);
 		index = PreferenceUtil.getValue(mContext, Constans.KEY_INDEX_IMAGE, 0);
-		
-		mWScratchView  = (WScratchView)this.findViewById(R.id.scratch_view);
-		mWScratchView.setOnScratchCallback(new WScratchView.OnScratchCallback() {
 
-			@Override
-			public void onScratch(float percentage) {
-				if(percentage > 50){
-					mWScratchView.setScratchable(false);
-					  Toast.makeText(mContext, "Bạn chỉ được cào 50%", Toast.LENGTH_LONG).show();
-				}
-					
-			}
+		mWScratchView = (WScratchView) this.findViewById(R.id.scratch_view);
+		mWScratchView
+				.setOnScratchCallback(new WScratchView.OnScratchCallback() {
 
-		});
-		
+					@Override
+					public void onScratch(float percentage) {
+						if (percentage > 50) {
+							mWScratchView.setScratchable(false);
+							Toast.makeText(mContext, "Bạn chỉ được cào 50%",
+									Toast.LENGTH_LONG).show();
+						}
+					}
+
+				});
+
 		super.initialize();
 	}
 
@@ -73,7 +65,6 @@ public class PlayingImageActivity extends BaseActivity implements
 
 		Bitmap bitmap = getBitmapFromAsset(this.mQuestionEntity.getImage());
 		this.mImgQuestion.setImageBitmap(bitmap);
-		
 
 		// bitmap.recycle();
 		// bitmap = null;
@@ -100,7 +91,7 @@ public class PlayingImageActivity extends BaseActivity implements
 		mWinDialog = new WinDialog(mContext, mQuestionEntity);
 		mWinDialog.setOnCloseWinDialog(this);
 		mWinDialog.show();
-		
+
 		mWScratchView.resetView();
 		mWScratchView.setScratchable(true);
 	}
@@ -108,8 +99,7 @@ public class PlayingImageActivity extends BaseActivity implements
 	@Override
 	public void closeDialog() {
 		mWScratchView.setVisibility(View.VISIBLE);
-		next();		
+		next();
 	}
 
-	
 }

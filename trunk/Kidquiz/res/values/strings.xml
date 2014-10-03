@@ -4,7 +4,7 @@
 	
     <string name="app_name">Cratch Kid Photos</string>
     <string name="slogan">Nothing is impossible</string>
-    <string name="congratulations">AWESOME!!!</string>
+    <string name="congratulations">AWESOME\n!!!</string>
     <string name="victory">WINNER</string>
     <string name="vic_info">You\'ve finished this game</string>
     <string name="dapan">You\'ve found the anwser</string>
