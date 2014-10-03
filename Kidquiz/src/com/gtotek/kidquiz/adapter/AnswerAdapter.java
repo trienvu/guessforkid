@@ -2,7 +2,6 @@ package com.gtotek.kidquiz.adapter;
 
 import java.util.List;
 
-import com.google.android.gms.internal.co;
 import com.gtotek.kidquiz.R;
 import com.gtotek.kidquiz.dao.Letter;
 import com.gtotek.kidquiz.dao.QuestionEntity;
