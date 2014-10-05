@@ -40,7 +40,7 @@
             android:adjustViewBounds="true"
             android:visibility="visible"
             app1:antiAlias="true"
-            app1:scratchDrawable="@drawable/ic_kid"
+            app1:scratchDrawable="@drawable/img_scratch1"
             app1:overlayColor="#3fe20c"
             app1:revealSize="20dp" />
     </RelativeLayout>

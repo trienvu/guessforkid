@@ -4,5 +4,6 @@
     <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar" />
 
     <style name="AppTheme" parent="@style/AppBaseTheme" />
-
+	
+    <dimen name="start_iv_kid_width_height">200dp</dimen>
 </resources>
