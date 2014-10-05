@@ -59,7 +59,7 @@
 -dontwarn android.support.v4.**
 -dontwarn com.androidquery.**
 -dontwarn com.google.ads.**
-
+-dontwarn com.google.android.gms.cast.**
 
 
 # Đổi tên tất cả các class , package thành 1 ký tự đơn như a, b, c...
