@@ -92,7 +92,7 @@ public abstract class BaseActivity extends Activity {
 		 * Toast.LENGTH_LONG).show(); finish(); }
 		 */
 
-		// setInterstitialAd();
+		setInterstitialAd();
 		initialize();
 	}
 
