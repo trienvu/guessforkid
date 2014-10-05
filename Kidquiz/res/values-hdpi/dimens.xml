@@ -44,5 +44,5 @@
     
     <dimen name="start_header_height_width">30sp</dimen>
     
-    
+    <dimen name="start_iv_kid_width_height">160dp</dimen>
 </resources>

@@ -36,4 +36,7 @@
     <dimen name="left_padding">4dp</dimen>
     <dimen name="right_padding">4dp</dimen>
     <dimen name="horizontal_spacing">3dp</dimen>
+    
+    <dimen name="start_iv_kid_width_height">180dp</dimen>
+    
 </resources>

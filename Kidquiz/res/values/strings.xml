@@ -2,7 +2,7 @@
     
     <string name="internet_error_msg">Please check your internet !!!</string>
 	
-    <string name="app_name">Cratch Kid Photos</string>
+    <string name="app_name">Scratch Kid Photo</string>
     <string name="slogan">Nothing is impossible</string>
     <string name="congratulations">AWESOME\n!!!</string>
     <string name="victory">WINNER</string>
@@ -22,7 +22,7 @@
     <string name="desc_jav">This is your string.
   		 This is the second line of your string.\n\n 
   		 Third line of your string.</string>
-    <string name="version_info"> Scratch Kid Photos\nVersion:1.0\nEmail:Gtotek135@gmail.com\nDev: GtoTek Solution</string>
+    <string name="version_info"> Scratch Kid Photo\nVersion:1.0\nEmail:Gtotek135@gmail.com\nDev: GtoTek Solution</string>
     <string name="close">Close</string>
     <string name="id_admob">ca-app-pub-7725997656573645/6062327016</string>
     
@@ -43,4 +43,5 @@
     <string name="wonderful">INTELLIGENT\n!!!</string>
     <string name="guessed"> You\'ve guessed the word!</string>
    
+    <string name="app_title">SCRATCH \nKID PHOTO</string>
 </resources>

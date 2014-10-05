@@ -14,4 +14,6 @@
     <dimen name="actionbar_height">60dp</dimen>
 
     <dimen name="start_header_height_width">40sp</dimen>
+    
+    <dimen name="start_iv_kid_width_height">180dp</dimen>
 </resources>
