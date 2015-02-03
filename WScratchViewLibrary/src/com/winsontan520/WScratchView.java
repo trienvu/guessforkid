@@ -93,22 +93,16 @@ public class WScratchView extends SurfaceView implements IWScratchView, SurfaceH
 		final int indexCount = ta.getIndexCount();
 		for (int i = 0; i < indexCount; i++) {
 			int attr = ta.getIndex(i);
-			switch (attr) {
-			case R.styleable.WScratchView_overlayColor:
+			if (attr == R.styleable.WScratchView_overlayColor) {
 				mOverlayColor = ta.getColor(attr, DEFAULT_COLOR);
-				break;
-			case R.styleable.WScratchView_revealSize:
+			} else if (attr == R.styleable.WScratchView_revealSize) {
 				mRevealSize = ta.getDimensionPixelSize(attr, DEFAULT_REVEAL_SIZE);
-				break;
-			case R.styleable.WScratchView_antiAlias:
+			} else if (attr == R.styleable.WScratchView_antiAlias) {
 				mIsAntiAlias = ta.getBoolean(attr, false);
-				break;
-			case R.styleable.WScratchView_scratchable:
+			} else if (attr == R.styleable.WScratchView_scratchable) {
 				mIsScratchable = ta.getBoolean(attr, true);
-				break;
-			case R.styleable.WScratchView_scratchDrawable:
+			} else if (attr == R.styleable.WScratchView_scratchDrawable) {
 				mScratchDrawable = ta.getDrawable(R.styleable.WScratchView_scratchDrawable);
-				break;
 			}
 		}
 
