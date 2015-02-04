@@ -1,6 +1,6 @@
 package com.gtotek.kidquiz.dao;
 
-import android.annotation.SuppressLint; 
+import android.annotation.SuppressLint;
 
 public class Letter implements Cloneable{ 
 

@@ -44,4 +44,6 @@
     <string name="guessed"> You\'ve guessed the word!</string>
    
     <string name="app_title">SCRATCH \nKID PHOTO</string>
+    
+    <string name="scratch_limit">You could only open 50% of picture.</string>
 </resources>

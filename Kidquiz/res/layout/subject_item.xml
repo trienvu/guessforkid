@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relChannelItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="1dp"
+    android:background="@drawable/round_channel_selector"
+    android:padding="3dp" >
+
+    <ImageView
+        android:id="@+id/imgChanelLogo"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:padding="3dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/sub1" />
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgChanelLogo"
+        android:layout_alignRight="@+id/imgChanelLogo"
+        android:layout_below="@+id/imgChanelLogo"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="3dip" >
+
+        <!-- Name Of Chanel -->
+
+        <TextView
+            android:id="@+id/tvChanelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:textColor="#040404"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+    </LinearLayout>
+
+</RelativeLayout>

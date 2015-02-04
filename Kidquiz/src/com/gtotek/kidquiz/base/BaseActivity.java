@@ -219,7 +219,6 @@ public abstract class BaseActivity extends Activity {
 	}
 
 	protected void help() {
-
 		if (ruby > 20) {
 			if (!mAnswerAdapter.suscess(mQuestionEntity)) {
 				Integer position = mAnswerAdapter.hepl(mQuestionEntity,
