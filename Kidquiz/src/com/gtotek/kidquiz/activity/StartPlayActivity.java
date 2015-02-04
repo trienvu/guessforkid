@@ -44,7 +44,7 @@ public class StartPlayActivity extends Activity implements View.OnClickListener 
 			@Override
 			public void onClick(View arg0) {
 				Intent intent = new Intent(StartPlayActivity.this,
-						PlayingImageActivity.class);
+						SubjectActivity.class);
 				startActivity(intent);
 			}
 		});

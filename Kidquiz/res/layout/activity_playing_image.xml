@@ -15,8 +15,8 @@
         android:id="@+id/rltFrame"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/dmn_img_question_height"
-        android:layout_marginLeft="@dimen/dmn_view_question_margin_left_right"
-        android:layout_marginRight="@dimen/dmn_view_question_margin_left_right"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/bg_photo"
         android:padding="20dp" >
