@@ -30,7 +30,7 @@ public class StartPlayActivity extends Activity implements View.OnClickListener 
 
 	private Context mContext = this;
 
-	private int soundState = 1;
+	private boolean soundState = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,9 +70,9 @@ public class StartPlayActivity extends Activity implements View.OnClickListener 
 
 		mImgSound = (ImageView) this.findViewById(R.id.ivSound);
 
-		soundState = PreferenceUtil.getValue(mContext, Constans.KEY_SOUND, 1);
+		soundState = PreferenceUtil.getValue(mContext, Constans.KEY_SOUND, true);
 
-		if (soundState == 1) {
+		if (soundState) {
 			// sound enable
 			mImgSound.setBackgroundResource(R.drawable.btn_sound_on);
 		} else {
@@ -83,17 +83,14 @@ public class StartPlayActivity extends Activity implements View.OnClickListener 
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				if (soundState == 1) {
-					soundState = 0;
+				if (soundState) {					
 					mImgSound.setBackgroundResource(R.drawable.btn_sound_off);
 
-				} else {
-					soundState = 1;
+				} else {					
 					mImgSound.setBackgroundResource(R.drawable.btn_sound_on);
 				}
-				
-				 PreferenceUtil.setValue(mContext, Constans.KEY_SOUND, soundState);
+				soundState = !soundState;
+				PreferenceUtil.setValue(mContext, Constans.KEY_SOUND, soundState);
 			}
 		});
 	}

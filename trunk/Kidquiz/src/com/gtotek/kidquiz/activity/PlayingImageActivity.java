@@ -17,6 +17,7 @@ import com.gtotek.kidquiz.base.Constans;
 import com.gtotek.kidquiz.dialog.WinDialog;
 import com.gtotek.kidquiz.dialog.WinDialog.OnCloseWinDialog;
 import com.gtotek.kidquiz.util.PreferenceUtil;
+import com.gtotek.kidquiz.util.SoundUtil;
 import com.winsontan520.WScratchView;
 
 public class PlayingImageActivity extends BaseActivity implements
@@ -40,7 +41,8 @@ public class PlayingImageActivity extends BaseActivity implements
 					public void onScratch(float percentage) {
 						if (percentage > 50) {
 							mWScratchView.setScratchable(false);
-							Toast.makeText(mContext, "Bạn chỉ được cào 50%",
+							SoundUtil.hexat(mContext, SoundUtil.LIMIT_SCRATCH);
+							Toast.makeText(mContext, getResources().getString(R.string.scratch_limit),
 									Toast.LENGTH_LONG).show();
 						}
 					}
